@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/08 23:54:25 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/09 12:02:25 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,10 @@ srcs/ft_isalnum.c\
 srcs/ft_isascii.c\
 srcs/ft_isprint.c\
 srcs/ft_toupper.c\
-srcs/ft_tolower.c
+srcs/ft_tolower.c\
+srcs/ft_strcpy.c\
+srcs/ft_strcat.c\
+srcs/ft_atoi.c
 
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror -I includes
