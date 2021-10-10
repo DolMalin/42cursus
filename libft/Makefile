@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/09 13:03:29 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/10 16:33:13 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,10 @@ srcs/ft_tolower.c\
 srcs/ft_strcpy.c\
 srcs/ft_strcat.c\
 srcs/ft_atoi.c\
-srcs/ft_memset.c
+srcs/ft_memset.c\
+srcs/ft_bzero.c\
+srcs/ft_memcpy.c\
+srcs/ft_memccpy.c
 
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror -I includes
