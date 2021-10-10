@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 16:34:41 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 17:18:23 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/10 17:18:09 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/10 17:47:26 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	size_t				i;
 	unsigned char		*dest_c;
 	const unsigned char	*src_c;
 
-	if (!dest && !src)
-		return (0);
 	i = 0;
 	dest_c = dest;
 	src_c = src;
-	while (i < size)
+	if (src < dest)
 	{
-		dest_c[i] = src_c[i];
-		i++;
+		while (i < size)
+		{
+			dest_c[size - i - 1] = src_c[size - i - 1];
+			i++;
+		}
 	}
+	else
+		ft_memcpy(dest, src, size);
 	return (dest);
 }

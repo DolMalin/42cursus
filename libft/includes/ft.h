@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:39:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 16:37:41 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/10 18:03:42 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ int	ft_tolower(int c);
 int	ft_atoi(char *str);
 
 void	*ft_memset(void *ptr, int c, size_t size);
-void	bzero(void *ptr, size_t size);
-void	*ft_memcpy(void *dest, const void *src, size_t size);
-void	*ft_memccpy(void *dest, const void *src, int c, size_t size);
+void	ft_bzero(void *ptr, size_t size);
+void 	*ft_memcpy(void *dest, const void *src, size_t size);
+void	*ft_memmove(void *dest, const void *src, size_t size);
+void	*ft_memchr(const void *str, int to_find, size_t size);
+
 #endif
