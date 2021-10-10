@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:39:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 18:03:42 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/10 19:44:05 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@
 
 size_t	ft_strlen(char *str);
 char	*ft_strdup(char *src);
-size_t	ft_strlen(char *str);
 int	ft_strcmp(const char *first, const char *second);
 int	ft_strncmp(const char *first, const char *second, size_t length);
 char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, size_t size);
 char	*ft_strcat(char *dest, char *src);
+char	*ft_strncat(char *dest, char *src, size_t size);
+size_t ft_strlcat(char *dest, char *src, size_t size);
 
 int	ft_isdigit(int c);
 int	ft_isalpha(int c);
@@ -44,5 +46,6 @@ void	ft_bzero(void *ptr, size_t size);
 void 	*ft_memcpy(void *dest, const void *src, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memchr(const void *str, int to_find, size_t size);
+int		ft_memcmp(const void *str1, const void *str2, size_t size);
 
 #endif
