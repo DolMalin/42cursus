@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 12:52:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 16:04:38 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/10 16:34:41 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/10 16:37:03 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	*ft_memset(void *ptr, int c, size_t size)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
-	size_t			i;
-	unsigned char	*str;
-
+	size_t				i;
+	unsigned char		*dest_c;
+	const unsigned char	*src_c;
+	
+	if (!dest && !src)
+		return (0);
 	i = 0;
-	str = ptr;
+	dest_c = dest;
+	src_c = src;
 	while (i < size)
 	{
-		str[i] = c;
+		dest_c[i] = src_c[i];
 		i++;
 	}
-	return (ptr);
+	return (dest);
 }
