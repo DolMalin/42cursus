@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 19:21:32 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 19:53:42 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/10 19:48:55 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/10 19:50:56 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_strcmp(const char *str1, const char *str2)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
+	int				srclen;	
 
 	i = 0;
-	while (str1[i] || str2[i])
+	srclen = ft_strlen(src);
+	if (size < 1)
+		return (srclen);
+	while (src[i] && i < size - 1)
 	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		dest[i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return (srclen);
 }

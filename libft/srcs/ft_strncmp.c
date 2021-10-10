@@ -6,21 +6,21 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 19:37:32 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/08 19:59:08 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/10 19:55:00 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_strncmp(const char *first, const char *second, size_t length)
+int	ft_strncmp(const char *str1, const char *str2, size_t length)
 {
 	size_t	i;
 
 	i = 0;
-	while ((first[i] || second[i]) && i < length)
+	while ((str1[i] || str2[i]) && i < length)
 	{
-		if (first[i] != second[i])
-			return ((unsigned char)first[i] - (unsigned char)second[i]);
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
 	}
 	return (0);
