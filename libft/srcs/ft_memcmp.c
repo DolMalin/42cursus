@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 11:12:06 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 19:35:38 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/10 18:26:26 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/10 18:33:50 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-char	*ft_strcat(char *dest, char *src)
+int	ft_memcmp(const void *str1, const void *str2, size_t size)
 {
 	size_t	i;
-	size_t	destlen;
+	unsigned char *str1_c;
+	unsigned char *str2_c;
 
 	i = 0;
-	destlen = ft_strlen(dest);
-	while (src[i])
+	str1_c = (unsigned char *)str1;
+	str2_c = (unsigned char *)str2;
+	while (i < size)
 	{
-		dest[destlen + i] = src[i];
+		if (str1_c[i] != str2_c[i])
+			return (str1_c[i] - str2_c[i]);
 		i++;
 	}
-	dest[destlen + i] = '\0';
-	return (dest);
+	return (0);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 11:12:06 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 19:35:38 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/10 19:34:05 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/10 19:36:09 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, size_t size)
 {
 	size_t	i;
 	size_t	destlen;
 
 	i = 0;
 	destlen = ft_strlen(dest);
-	while (src[i])
+	while (src[i] && i < size)
 	{
 		dest[destlen + i] = src[i];
 		i++;
