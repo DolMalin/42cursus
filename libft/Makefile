@@ -6,13 +6,13 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/11 12:02:24 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/11 12:14:17 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = \
+PART_1 = \
 srcs/ft_strlen.c\
 srcs/ft_strdup.c\
 srcs/ft_strcmp.c\
@@ -43,6 +43,7 @@ srcs/ft_memmove.c\
 srcs/ft_memchr.c\
 srcs/ft_memcmp.c
 
+SRCS = $(PART_1)
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror -I includes
 

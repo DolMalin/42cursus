@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 11:04:54 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 18:47:15 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:10:38 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (src[i])

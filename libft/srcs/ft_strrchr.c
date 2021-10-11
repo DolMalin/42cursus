@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 11:06:39 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/11 11:55:51 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:10:12 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *str, int to_find)
 {
-	size_t 			i;
+	size_t			i;
 	unsigned char	to_find_c;
 
 	i = ft_strlen((char *)str);

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:48:55 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/10 19:50:56 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/11 12:09:33 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	size_t	i;
+	size_t			i;
 	int				srclen;	
 
 	i = 0;
