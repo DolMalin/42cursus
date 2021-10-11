@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:45:13 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/02 12:49:25 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/11 20:18:03 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(char *src)
 	char	*copy_str;
 
 	i = 0;
-	copy_str = (char *)malloc(sizeof(*src) * (ft_strlen(src) + 1));
+	copy_str = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!copy_str)
 		return (0);
 	while (src[i])
