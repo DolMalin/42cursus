@@ -6,44 +6,59 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/11 12:14:17 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/11 15:55:10 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-PART_1 = \
-srcs/ft_strlen.c\
-srcs/ft_strdup.c\
-srcs/ft_strcmp.c\
-srcs/ft_strncmp.c\
-srcs/ft_strcpy.c\
-srcs/ft_strlcpy.c\
-srcs/ft_strncpy.c\
-srcs/ft_strcat.c\
-srcs/ft_strncat.c\
-srcs/ft_strlcat.c\
-srcs/ft_strstr.c\
-srcs/ft_strnstr.c\
-srcs/ft_strchr.c\
-srcs/ft_strrchr.c\
-srcs/ft_isdigit.c\
-srcs/ft_isalpha.c\
-srcs/ft_isalnum.c\
-srcs/ft_isascii.c\
-srcs/ft_isprint.c\
-srcs/ft_toupper.c\
-srcs/ft_tolower.c\
-srcs/ft_atoi.c\
-srcs/ft_memset.c\
-srcs/ft_bzero.c\
-srcs/ft_memcpy.c\
-srcs/ft_memccpy.c\
-srcs/ft_memmove.c\
-srcs/ft_memchr.c\
-srcs/ft_memcmp.c
+LIBC = \
+srcs/libc/ft_strlen.c\
+srcs/libc/ft_strdup.c\
+srcs/libc/ft_strcmp.c\
+srcs/libc/ft_strncmp.c\
+srcs/libc/ft_strcpy.c\
+srcs/libc/ft_strlcpy.c\
+srcs/libc/ft_strncpy.c\
+srcs/libc/ft_strcat.c\
+srcs/libc/ft_strncat.c\
+srcs/libc/ft_strlcat.c\
+srcs/libc/ft_strstr.c\
+srcs/libc/ft_strnstr.c\
+srcs/libc/ft_strchr.c\
+srcs/libc/ft_strrchr.c\
+srcs/libc/ft_isdigit.c\
+srcs/libc/ft_isalpha.c\
+srcs/libc/ft_isalnum.c\
+srcs/libc/ft_isascii.c\
+srcs/libc/ft_isprint.c\
+srcs/libc/ft_toupper.c\
+srcs/libc/ft_tolower.c\
+srcs/libc/ft_atoi.c\
+srcs/libc/ft_memset.c\
+srcs/libc/ft_bzero.c\
+srcs/libc/ft_memcpy.c\
+srcs/libc/ft_memccpy.c\
+srcs/libc/ft_memmove.c\
+srcs/libc/ft_memchr.c\
+srcs/libc/ft_memcmp.c
 
-SRCS = $(PART_1)
+ADDITIONALS = \
+srcs/additionals/ft_memalloc.c\
+srcs/additionals/ft_memdel.c\
+srcs/additionals/ft_strnew.c\
+srcs/additionals/ft_strdel.c\
+srcs/additionals/ft_strclr.c\
+srcs/additionals/ft_striter.c\
+srcs/additionals/ft_striteri.c\
+srcs/additionals/ft_strmap.c\
+srcs/additionals/ft_strmapi.c\
+srcs/additionals/ft_strequ.c\
+srcs/additionals/ft_strnequ.c\
+srcs/additionals/ft_strsub.c\
+srcs/additionals/ft_strjoin.c
+
+SRCS = $(LIBC) $(ADDITIONALS)
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror -I includes
 

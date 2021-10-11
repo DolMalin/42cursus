@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:39:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/11 12:24:28 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/11 15:54:59 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,20 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memchr(const void *str, int to_find, size_t size);
 int		ft_memcmp(const void *str1, const void *str2, size_t size);
+
+/* =============== PART 2 - ADDITIONALS FUNCTIONS =============== */
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *str);
+void	ft_striter(char *str, void(*f)(char *));
+void	ft_striteri(char *str, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *str, char (*f)(char));
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+int		ft_strequ(char const *str1, char const *str2);
+int		ft_strnequ(char const *str1, char const *str2, size_t size);
+char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_strjoin(char const *str1, char const *str2);
 
 #endif                                         
