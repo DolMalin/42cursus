@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 16:23:29 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/11 11:58:01 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/11 11:06:39 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/11 11:55:51 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t size)
+char	*ft_strrchr(const char *str, int to_find)
 {
-	size_t				i;
-	unsigned char		*dest_c;
-	const unsigned char	*src_c;
+	size_t 			i;
+	unsigned char	to_find_c;
 
-	i = 0;
-	dest_c = dest;
-	src_c = src;
-	while (i < size)
+	i = ft_strlen((char *)str);
+	to_find_c = (unsigned char)to_find;
+	while (i > 0)
 	{
-		dest_c[i] = src_c[i];
-		if (dest_c[i] == (unsigned char)c)
-			return (&dest_c[i + 1]);
-		i++;
+		if (str[i] == to_find_c)
+			return ((char *)str + i);
+		i--;
 	}
+	if (str[i] == to_find_c)
+		return ((char *)str + i);
 	return (NULL);
 }

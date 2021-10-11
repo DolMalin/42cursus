@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/10 19:51:50 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/11 12:02:24 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,10 @@ srcs/ft_strncpy.c\
 srcs/ft_strcat.c\
 srcs/ft_strncat.c\
 srcs/ft_strlcat.c\
+srcs/ft_strstr.c\
+srcs/ft_strnstr.c\
+srcs/ft_strchr.c\
+srcs/ft_strrchr.c\
 srcs/ft_isdigit.c\
 srcs/ft_isalpha.c\
 srcs/ft_isalnum.c\
@@ -34,6 +38,7 @@ srcs/ft_atoi.c\
 srcs/ft_memset.c\
 srcs/ft_bzero.c\
 srcs/ft_memcpy.c\
+srcs/ft_memccpy.c\
 srcs/ft_memmove.c\
 srcs/ft_memchr.c\
 srcs/ft_memcmp.c
