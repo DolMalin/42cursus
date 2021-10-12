@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 11:42:49 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/12 14:28:22 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/12 14:39:51 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/12 14:40:08 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl_fd(char const *str, int fd)
 {
-	write(1, &c, 1);
+	if (!str)
+		return ;
+	write(fd, str, ft_strlen((char *)str));
+	write(fd, "\n", 1);
 }

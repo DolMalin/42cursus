@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/12 11:48:44 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/12 14:42:27 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,13 @@ srcs/additionals/ft_strtrim.c\
 srcs/additionals/ft_strsplit.c\
 srcs/additionals/ft_itoa.c\
 srcs/additionals/ft_putchar.c\
-srcs/additionals/ft_putstr.c
+srcs/additionals/ft_putstr.c\
+srcs/additionals/ft_putendl.c\
+srcs/additionals/ft_putnbr.c\
+srcs/additionals/ft_putchar_fd.c\
+srcs/additionals/ft_putstr_fd.c\
+srcs/additionals/ft_putendl_fd.c\
+srcs/additionals/ft_putnbr_fd.c
 
 SRCS = $(LIBC) $(ADDITIONALS)
 OBJ = $(SRCS:.c=.o)
