@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:39:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/11 20:06:38 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/12 11:48:06 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,9 @@ int		ft_strnequ(char const *str1, char const *str2, size_t size);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *str1, char const *str2);
 char	*ft_strtrim(char const *str);
+char	**ft_strsplit(char *str, char c);
+char	*ft_itoa(int nb);
+void	ft_putchar(char c);
+void	ft_putstr(char const *str);
 
 #endif                                         

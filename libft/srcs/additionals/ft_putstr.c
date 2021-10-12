@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 12:50:24 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/12 10:41:45 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/12 11:46:58 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/12 11:49:22 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_putstr(char const *str)
 {
-	void	*output;
-
-	output = malloc(size);
-	if (!output)
-		return (NULL);
-	ft_bzero(output, size);
-	return (output);
+	if (!str)
+		return ;
+	write(1, str, ft_strlen((char *)str));
 }
