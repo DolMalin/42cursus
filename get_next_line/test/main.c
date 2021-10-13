@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:03:10 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/12 18:19:11 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:14:22 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(int ac, char **av)
 	fd = open(av[1], O_RDONLY);
 	while ((result = get_next_line(fd, &line)) > 0)
 	{
-		printf("STATUS : %i \n", result);
 		printf("RETURN : %s\n\n", line);
 		free(line);
 	}
+	printf("OVER\n");
 	return (0);
 }
