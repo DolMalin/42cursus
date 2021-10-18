@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 13:24:57 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:20:23 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,10 +100,11 @@ int	get_next_line(int fd, char **line)
 		if (ret == 0)
 		{
 			*line = ft_strdup(str);
-			return (0);
+			free(str);
+			return (FILE_OVER);
 		}
 	}
 	*line = get_line(str);
 	remove_first_line(&str);
-	return (1);	
+	return (LINE_OVER);	
 } 
