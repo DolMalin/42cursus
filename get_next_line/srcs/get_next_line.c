@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 17:20:23 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:10:12 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ static void	remove_first_line(char **str)
 	char	*rest;
 	size_t	endline;
 
-	endline = find_endline(*str) + 1;
-	rest = ft_strsub(*str, endline, ft_strlen(*str) - endline);
+	endline = find_endline(*str);
+	rest = ft_strsub(*str, endline + 1, ft_strlen(*str) - endline);
 	free(*str);
 	*str = rest;
 }
