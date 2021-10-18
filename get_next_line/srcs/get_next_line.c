@@ -6,60 +6,104 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/13 15:40:38 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:23:32 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_find_endline(char *str)
+/*
+
+
+*/
+
+int	find_endline(char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
 	{
 		if (str[i] == '\n')
-			return (i);
+			return ((int)i);
 		i++;
 	}
 	return (-1);
 }
 
-/* 
-La fonction lit bien jusqu'a la prochaine ligne, mais comme le buff lit trop, au rappel il faut lui indiquer comment revenir en arriere 
-*/
+int	read_file(int fd, char **str)
+{
+	char	buffer[BUFFER_SIZE + 1];
+	char	*new_line;
+	int		ret;
+
+	while (1)
+	{
+		ft_bzero(&buffer, BUFFER_SIZE + 1);
+		ret = read(fd, buffer, BUFFER_SIZE);
+		if (ret < 1)
+			return (ret);		
+		if (*str)
+		{
+			new_line = ft_strjoin(*str, buffer);
+			free(*str);
+			*str = new_line;
+		}
+		else
+			*str = ft_strdup(buffer);
+		if (find_endline(*str) != -1)
+			return	ret;
+	}
+}
+
+void	remove_first_line(char **str)
+{
+	char	*rest;
+	size_t	endline;
+
+	endline = find_endline(*str) + 1;
+	rest = ft_strsub(*str, endline, ft_strlen(*str) - endline);
+	free(*str);
+	*str = rest;
+}
+
+char	*get_line(char *str)
+{
+	char	*output;
+	size_t	i;
+
+	output = (char *)malloc(sizeof(char) * (find_endline(str) + 1));
+	i = 0;
+	if (!output)
+		return (NULL);
+	while ((int)i < find_endline(str))
+	{
+		output[i] = str[i];
+		i++;
+	}
+	output[i] = '\0';
+	return (output);
+}
 
 int	get_next_line(int fd, char **line)
 {
-	char		*buffer;
-	static char	*rest;
+	static char	*str;
+	int	ret;
 
-	buffer = (char *)malloc(BUFFER_SIZE + 1);
-	if (!buffer || !line || fd < 0 || BUFFER_SIZE < 1)
+	if (!line || fd < 0 || BUFFER_SIZE < 1)
 		return (ERR);
-	read(fd, buffer, BUFFER_SIZE);
-	if (ft_find_endline(buffer) > 0)
+	if (!str || find_endline(str) == -1)
 	{
-		// SI PREMIER CALL DE LA FONCTION
-		if (!rest)
+		ret = read_file(fd, &str);
+		if (ret == -1)
+			return (ERR);
+		if (ret == 0)
 		{
-			rest = ft_strsub(buffer, ft_find_endline(buffer), BUFFER_SIZE - ft_find_endline(buffer));
-			*line = ft_strsub(buffer, 0, ft_find_endline(buffer));
+			*line = ft_strdup(str);
+			return (0);
 		}
-		else
-		{
-			rest = ft_strsub(buffer, ft_find_endline(buffer), BUFFER_SIZE - ft_find_endline(buffer));
-			*line = ft_strjoin(rest, ft_strsub(buffer, 0, ft_find_endline(buffer)));
-		}
-		printf("\nrest : %s\n", rest);
-		return (LINE_OVER);	
 	}
-	else
-	{
-		if (!rest)
-			rest = ft_strsub(buffer, ft_find_endline(buffer), BUFFER_SIZE - ft_find_endline(buffer));
-		else
-			rest = ft_strsub(buffer, ft_find_endline(buffer), BUFFER_SIZE - ft_find_endline(buffer));
-	}
-}
+	*line = get_line(str);
+	remove_first_line(&str);
+	return (1);	
+} 

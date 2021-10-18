@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:51:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/13 15:23:41 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:20:14 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,20 @@ size_t	ft_strlen(char *str)
 	while (*str++)
 		i++;
 	return (i);
+}
+
+void	ft_bzero(void *ptr, size_t size)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = ptr;
+	while (i < size)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 
 char	*ft_strsub(char const *str, unsigned int start, size_t len)
@@ -62,5 +76,24 @@ char	*ft_strjoin(char const *str1, char const *str2)
 			output[i] = str2[i - ft_strlen((char *)str1)];
 		i++;
 	}
+	output[i] = '\0';
 	return (output);
+}
+
+char	*ft_strdup(char *src)
+{
+	int		i;
+	char	*copy_str;
+
+	i = 0;
+	copy_str = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!copy_str)
+		return (0);
+	while (src[i])
+	{
+		copy_str[i] = src[i];
+		i++;
+	}
+	copy_str[i] = '\0';
+	return (copy_str);
 }
