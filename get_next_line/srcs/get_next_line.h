@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:48:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 10:47:24 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:25:58 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 #define LINE_OVER 1
 #define	FILE_OVER 0
 
-int	get_next_line(int fd, char **line);
+int		get_next_line(int fd, char **line);
 size_t	ft_strlen(char *str);
 void	ft_bzero(void *ptr, size_t size);
 char	*ft_strsub(char const *str, unsigned int start, size_t len);

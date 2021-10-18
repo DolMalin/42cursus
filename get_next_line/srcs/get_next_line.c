@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 11:23:32 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 13:24:57 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 */
 
-int	find_endline(char *str)
+static int	find_endline(char *str)
 {
 	size_t	i;
 
@@ -31,7 +31,7 @@ int	find_endline(char *str)
 	return (-1);
 }
 
-int	read_file(int fd, char **str)
+static int	read_file(int fd, char **str)
 {
 	char	buffer[BUFFER_SIZE + 1];
 	char	*new_line;
@@ -56,7 +56,7 @@ int	read_file(int fd, char **str)
 	}
 }
 
-void	remove_first_line(char **str)
+static void	remove_first_line(char **str)
 {
 	char	*rest;
 	size_t	endline;
@@ -67,7 +67,7 @@ void	remove_first_line(char **str)
 	*str = rest;
 }
 
-char	*get_line(char *str)
+static char	*get_line(char *str)
 {
 	char	*output;
 	size_t	i;
