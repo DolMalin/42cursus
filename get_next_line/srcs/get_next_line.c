@@ -100,6 +100,12 @@ int	get_next_line(int fd, char **line)
 		}
 	}
 	*line = get_line(str);
+<<<<<<< HEAD
 	clean_last_line(&str);
 	return (LINE_OVER);
 }
+=======
+	remove_first_line(&str);
+	return (LINE_OVER);	
+} 
+>>>>>>> 4059ffd5a8687237fac557de39cc10ea7957161c
