@@ -6,16 +6,11 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 18:10:12 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:30:33 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-/*
-
-
-*/
 
 static int	find_endline(char *str)
 {
@@ -42,7 +37,7 @@ static int	read_file(int fd, char **str)
 		ft_bzero(&buffer, BUFFER_SIZE + 1);
 		ret = read(fd, buffer, BUFFER_SIZE);
 		if (ret < 1)
-			return (ret);		
+			return (ret);
 		if (*str)
 		{
 			new_line = ft_strjoin(*str, buffer);
@@ -52,11 +47,11 @@ static int	read_file(int fd, char **str)
 		else
 			*str = ft_strdup(buffer);
 		if (find_endline(*str) != -1)
-			return	ret;
+			return (ret);
 	}
 }
 
-static void	remove_first_line(char **str)
+static void	clean_last_line(char **str)
 {
 	char	*rest;
 	size_t	endline;
@@ -88,7 +83,7 @@ static char	*get_line(char *str)
 int	get_next_line(int fd, char **line)
 {
 	static char	*str;
-	int	ret;
+	int			ret;
 
 	if (!line || fd < 0 || BUFFER_SIZE < 1)
 		return (ERR);
@@ -105,6 +100,6 @@ int	get_next_line(int fd, char **line)
 		}
 	}
 	*line = get_line(str);
-	remove_first_line(&str);
-	return (LINE_OVER);	
-} 
+	clean_last_line(&str);
+	return (LINE_OVER);
+}
