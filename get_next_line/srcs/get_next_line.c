@@ -12,11 +12,6 @@
 
 #include "get_next_line.h"
 
-/*
-
-
-*/
-
 static int	find_endline(char *str)
 {
 	size_t	i;
