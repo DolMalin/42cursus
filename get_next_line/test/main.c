@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:03:10 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 10:42:08 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 17:36:09 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	main(int ac, char **av)
 		printf("RETURN : %s\n\n", line);
 		free(line);
 	}
+	free(line);
 	return (0);
 }
