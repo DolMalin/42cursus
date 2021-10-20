@@ -6,12 +6,23 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 13:13:40 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/20 11:55:50 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/20 20:18:33 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+void	ft_putaddress(void *input)
+{
+	size_t	i;
+
+	i = 0;
+	while ()
+	{
+		write(1, (input), 1);
+		input++;
+	}
+}
 
 void	print_param(va_list params_info, int param_type)
 {
@@ -19,8 +30,8 @@ void	print_param(va_list params_info, int param_type)
 		ft_putchar((char)va_arg(params_info , int));
 	if (param_type == 's')
 		ft_putstr((const char *)va_arg(params_info, const char *));
-/*	if (c == 'p')
-		return (va_arg(params_info, void *)); */
+	if (param_type == 'p')
+		ft_putaddress(va_arg(params_info, void *));
 	if (param_type == 'd')
 		ft_putnbr((int)va_arg(params_info, int));
 /*	if (c == 'u')
@@ -28,6 +39,8 @@ void	print_param(va_list params_info, int param_type)
 	if (c == 'x')
 		return (va_arg(params_info))
 	*/
+	if (param_type == '%')
+		ft_putchar('%');
 }
 
 int	ft_printf(const char *format, ...)
