@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 13:11:16 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/19 14:57:42 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/20 11:07:09 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = \
 srcs/ft_printf.c
 
 OBJ = $(SRCS:.c=.o)
-FLAGS = -Wall -Wextra -Werror -I ./includes
+FLAGS = -Wall -Wextra -Werror -I ./includes -I libft/includes
 
 all: $(NAME)
 
