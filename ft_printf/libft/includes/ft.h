@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:39:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/12 14:49:35 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:11:52 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,4 @@ void	ft_putstr_fd(char const *str, int fd);
 void	ft_putendl_fd(char const *str, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 
-#endif                                         
+#endif

@@ -1,5 +1,6 @@
 
 #include "libftprintf.h"
+#include "ft.h"
 
 int main()
 {
@@ -7,7 +8,7 @@ int main()
 	char *str = "michel";
 	int nb = -50000;
 
-	//ft_printf("%p\n", &nb);
-	printf("%p\n", &nb);
+	printf("coucou %s j'ai %d ans, je suis a %p\n", str, nb, &nb);
+	ft_printf("coucou %s j'ai %d ans, je suis a %p\n", str, nb, &nb);
 	return (0);		
 }

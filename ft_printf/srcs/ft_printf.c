@@ -6,23 +6,12 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 13:13:40 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/20 20:18:33 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:21:34 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-
-void	ft_putaddress(void *input)
-{
-	size_t	i;
-
-	i = 0;
-	while ()
-	{
-		write(1, (input), 1);
-		input++;
-	}
-}
+#include "ft.h"
 
 void	print_param(va_list params_info, int param_type)
 {

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:32:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/12 14:34:59 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:11:35 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(int nb)
 {
-	long int	a;	
+	unsigned long long a;	
 	char		nb_char;
 
 	a = nb;
