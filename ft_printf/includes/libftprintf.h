@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 13:13:57 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/21 17:25:05 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/21 17:40:15 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 #include "ft.h"
 
-char	*ft_itoa_hex(unsigned long long nb);
-void	ft_putnbr_hex(void *input);
+char	*ft_itoa_hex(unsigned long long nb, char *base);
+void	ft_putnbr_hex(void *input, char specifier);
 void	ft_putaddress(void *input);
 int		ft_printf(const char *format, ...);
 #endif

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:49:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/18 18:30:33 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/18 19:39:19 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,6 @@ int	get_next_line(int fd, char **line)
 		}
 	}
 	*line = get_line(str);
-<<<<<<< HEAD
 	clean_last_line(&str);
 	return (LINE_OVER);
 }
-=======
-	remove_first_line(&str);
-	return (LINE_OVER);	
-} 
->>>>>>> 4059ffd5a8687237fac557de39cc10ea7957161c

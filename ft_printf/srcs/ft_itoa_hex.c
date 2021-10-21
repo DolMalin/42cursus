@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:17:46 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/21 17:12:55 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/10/21 17:40:01 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strreverse(char *str)
 	return (str);
 }
 
-char	*ft_itoa_hex(unsigned long long nb)
+char	*ft_itoa_hex(unsigned long long nb, char *base)
 {
 	char	*output;
 	size_t	i;
@@ -60,10 +60,10 @@ char	*ft_itoa_hex(unsigned long long nb)
 	if (!output)
 		return (0);
 	if (nb == 0)
-		output[i] = "0123456789abcdef"[nb % 16];
+		output[i] = base[nb % 16];
 	while (nb > 0)
 	{
-		output[i] = "0123456789abcdef"[nb % 16];
+		output[i] = base[nb % 16];
 		nb = nb / 16;
 		i++;
 	}
