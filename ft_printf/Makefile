@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 13:11:16 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/10/21 15:49:44 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/10/21 17:26:35 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,10 @@ LIBFT = libft
 SRCS = \
 srcs/ft_printf.c\
 srcs/ft_itoa_hex.c\
-srcs/ft_putaddress.c
+srcs/ft_putaddress.c\
+srcs/ft_putnbr_hex.c\
 
-OBJ = $(SRCS:.c=.o)
+OBJ = $(SRCS:.c=.o) 
 FLAGS = -Wall -Wextra -Werror -I ./includes -I libft/includes
 
 all: $(NAME)
