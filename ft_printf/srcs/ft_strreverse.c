@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
+/*   ft_strreverse.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 16:12:08 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/10/22 12:25:42 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/10/22 12:10:11 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/10/22 12:10:41 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include "ft.h"
 
-void	ft_putnbr_hex(void *input, char specifier)
+char	*ft_strreverse(char *str)
 {
-	char	*nbr;
+	char	buff;
+	size_t	i;
 
-	nbr = NULL;
-	if (specifier == 'x')
-		nbr = ft_llutoa_hex((unsigned long long)input, "0123456789abcdef");
-	else if (specifier == 'X')
-		nbr = ft_itoa_hex((unsigned long long)input, "0123456789ABCDEF");
-	ft_putstr(nbr);
-	free(nbr);
+	i = 0;
+	while (i < ft_strlen(str) / 2)
+	{
+		buff = str[i];
+		str[i] = str[ft_strlen(str) - i - 1];
+		str[ft_strlen(str) - i - 1] = buff;
+		i++;
+	}
+	return (str);
 }

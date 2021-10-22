@@ -2,7 +2,8 @@
 #include "libftprintf.h"
 #include "ft.h"
 
-// itoa_hex ne gere pas les nbr negatifs
+// itoa_hex ne gere pas les nbr negatifs ???
+// ft_nblen calcule t'il la bonne taille avec les nbr hexa?
 
 int main()
 {
